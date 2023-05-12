@@ -19,47 +19,46 @@ function divide(num1, num2) {
 
 // 1. add Function
 function test1() {
-  const addResult = add(1,3)
-  const expected = 4
-  if (addResult === expected) {
-    console.log("Add Function passed!")
-  } else {
-    console.log("Add Function fail!")
-  }
+  const addResult = add(1, 3);
+  const expected = 4;
+  console.assert(
+    addResult == expected,
+    `Check add function expected: ${expected} result: ${addResult}`
+  );
 }
 
 // 2. subtract function
 function test2() {
   const subtractResult = subtract(3,1)
   const expected = 2
-  if (subtractResult === expected) {
-    console.log("Subtract Function passed!")
-  } else {
-    console.log("Subtract Function fail!")
-  }
+  console.assert(
+    subtractResult == expected,
+    `Check subtract function expected: ${expected} result: ${subtractResult}`
+  )
 }
 
 // 3. multiply function
 function test3() {
-  const subtractResult = multiply(3,3)
+  const multiplyResult = multiply(3,3)
   const expected = 9
-  if (subtractResult === expected) {
-    console.log("multiply Function passed!")
-  } else {
-    console.log("multiply Function fail!")
-  }
+  console.assert(
+    multiplyResult == expected,
+    `Check subtract function expected: ${expected} result: ${multiplyResult}`
+  )
 }
 
 // 3. divide function
 function test4() {
-  const subtractResult = divide(3,3)
+  const divideResult = divide(3,3)
   const expected = 1
-  if (subtractResult === expected) {
-    console.log("divide Function passed!")
-  } else {
-    console.log("divide Function fail!")
-  }
+  console.assert(
+    divideResult == expected,
+    `Check subtract function expected: ${expected} result: ${divideResult}`
+  )
 }
+
+// The console.assert() writes an error message to the console if the assertion is false. 
+// If the assertion is true, nothing happens.
 
 test1()
 test2()
